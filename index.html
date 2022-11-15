@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+
+    <table>
+      <tr>
+        <th>Makanan favorit</th>
+        <th>Minuman favorit</th>
+        <th>tim bubur diaduk apa tidak</th>
+        <th>Form</th>
+      </tr>
+      <tr>
+        <td>Bakso</td>
+        <td>Coca-Cola</td>
+        <td></td>
+        <td class="input1"></td>
+      </tr>
+      <tr>
+        <td>Mie Ayam</td>
+        <td>Sprite</td>
+        <td></td>
+        <td class="input2"></td>
+      </tr>
+      <tr>
+        <td>Indomie Goreng</td>
+        <td>Pocari</td>
+        <td>Tidak</td>
+        <td class="input3"></td>
+      </tr>
+      <tr>
+        <td>Indomie Rebus</td>
+        <td>Fanta</td>
+        <td></td>
+        <td class="input4"></td>
+      </tr>
+    </table>
+
+    <form method="post">
+      <ul>
+        <li>
+          <label for="text">NAMA</label
+          ><input
+            id="text"
+            type="text"
+            name="text"
+            value="Alvito Zidane Avianto"
+          />
+        </li>
+
+        <li>
+          <label for="email">EMAIl</label
+          ><input
+            id="email"
+            type="email"
+            name="email"
+            value="alvitozidane76@gmail.com"
+          />
+        </li>
+
+        <li>
+          <label for="textarea">DESKRIPSI</label
+          ><textarea name="textarea" id="textarea" cols="15" rows="10">
+Saya Adalah Peserta Bootcamp Salt.id Batch 5</textarea
+          >
+        </li>
+        <li>
+          <input type="submit" id="submit" />
+        </li>
+      </ul>
+    </form>
+
+    <script>
+      //tangkap
+      const text = document.querySelector("#text");
+      const email = document.querySelector("#email");
+      const textarea = document.querySelector("#textarea");
+      const submit = document.querySelector("#submit");
+
+      //input
+      const input1 = document.querySelector(".input1");
+      const input2 = document.querySelector(".input2");
+      const input3 = document.querySelector(".input3");
+      const input4 = document.querySelector(".input4");
+      //   console.log(text, email, textarea);
+
+      submit.addEventListener("click", function (e) {
+        e.preventDefault();
+        input1.textContent = text.value;
+        input2.textContent = email.value;
+        input3.textContent = textarea.value;
+        input4.textContent = submit.value;
+      });
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>
